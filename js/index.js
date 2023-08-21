@@ -35,10 +35,18 @@ function handleClickCard(card) {
  
 }
 
+function handleClickBtnApply() {
+  const codeElement = document.getElementById("btn-promo-code");
+  const codeElementValue = codeElement.value;
+  if (codeElementValue === SELL200 ) {
+    document.getElementById("discount").innerText
+  }
+}
+
+
 function handleClickBtn() {
   document.getElementById("selected-item").innerText ="";
   document.getElementById("total-price").innerText = "";
   document.getElementById("discount").innerText = "";
   document.getElementById("total").innerText = "";
 }
-
