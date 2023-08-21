@@ -23,18 +23,16 @@ function handleClickCard(card) {
   const totalElementValueString = parseFloat(totalElementValue);
   const totalAmount = (total - discountAmount).toFixed(2);
   totalElement.innerText = totalAmount;
-}
-function showModal() {
-  const buttonElement = document.getElementById("btn-purchase");
-  const totalAmount = parseFloat(
-    document.getElementById("total-price").innerText.split(" ")[0]
-  );
-  
-  if (totalAmount > 0) {
-    buttonElement.removeAttribute("disabled"); // Remove the "disabled" attribute
-  } else {
-    buttonElement.setAttribute("disabled", "disabled"); // Add the "disabled" attribute
-  }
+ if (total>0) {
+  document.getElementById("btn-purchase").removeAttribute("disabled")
+ }
+ if (total<200) {
+  document.getElementById("discount").innerText = "";
+ }
+ if (total>200) {
+  document.getElementById("btn-apply").removeAttribute("disabled")
+ }
+ 
 }
 
 function handleClickBtn() {
