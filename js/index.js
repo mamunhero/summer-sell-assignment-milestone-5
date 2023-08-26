@@ -39,11 +39,19 @@ function handleClickBtnApply() {
   } 
 }
 
+// document.getElementById("btn-purchase").addEventListener("click", function () {
+//   if (total > 200 ) {
+//     alert("Congratulations! You will get 20% Discount. Please write Coupon Code SELL, you can enjoy discount");
+//   } else {
+//     alert("Total amount is not enough for the special offer.");
+//   }
+// })
 
  function handleClickBtn() {
   document.getElementById("selected-item").innerText ="";
   document.getElementById("total-price").innerText = "";
   document.getElementById("discount").innerText = "";
   document.getElementById("total").innerText = "";
+  document.getElementById("coupon-code").value = "";
 }
 
